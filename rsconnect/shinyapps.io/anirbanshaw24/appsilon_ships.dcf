@@ -1,0 +1,13 @@
+name: appsilon_ships
+title: appsilon_ships
+username:
+account: anirbanshaw24
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3361265
+bundleId: 3951302
+url: https://anirbanshaw24.shinyapps.io/appsilon_ships/
+when: 1607279929.91769
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: data/ships.csv
