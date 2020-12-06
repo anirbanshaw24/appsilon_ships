@@ -24,9 +24,8 @@ library(fst)
 library(wesanderson)
 library(waiter)
 
-
-# Load the saved rData image
-load(file='ships.RData')
+processed_data <- read.fst('data/processed_data.fst', as.data.table = T)
+parked_ships <- read.fst('data/parked_ships.fst', as.data.table = T)
 
 # # Import data from path
 # master_data <- read.csv('data/ships.csv')
@@ -52,8 +51,9 @@ load(file='ships.RData')
 #   mutate_at(vars(max_dist_count), ~replace(., is.na(.), -1)) %>%
 #   ungroup() %>%
 #   select(LAT, LON, SPEED, DESTINATION, LENGTH, WIDTH, DWT, SHIPNAME, SHIPTYPE, PORT, SHIP_ID, date, ship_type, port, is_parked, LAT_prev, LON_prev, distance, max_dist, max_dist_count)
+# write_fst(processed_data, 'data/processed_data.fst', compress = 50, uniform_encoding = FALSE)
 # 
-# # Generate a data frame of unique ports in the data set
+# Generate a data frame of unique ports in the data set
 # parked_ships <- processed_data %>%
 #   filter(is_parked == 1) %>%
 #   filter(SPEED == 0) %>%
@@ -61,11 +61,7 @@ load(file='ships.RData')
 #   slice(n()) %>%
 #   ungroup() %>%
 #   distinct(port, .keep_all = T)
-# 
-# # Remove raw data and save the image to be read later for Shiny App
-# rm(master_data)
-# save.image(file='ships.RData')
-
+# write_fst(parked_ships, 'data/parked_ships.fst', compress = 50, uniform_encoding = FALSE)
 
 # Initialize palettes from Wes Anderson
 wes_pal <- wes_palette("Darjeeling1")

@@ -34,5 +34,5 @@ This app is built on a AIS dataset that logs the ships GPS coordinates and vario
 
 ### Notes
 - Shiny semantic is used wherever suitable. In some places, fluidrow have been used as it easily adjusts to various devices like mobile, tablets and desktops.
-- Certain preprocessing have been performed on the raw dataset and the rdata image has been saved. When the app loads, this rData image is read and objects loaded to the memory. This achives much faster load times compared to reading the raw data and preprocessing it from scratch.
+- Certain preprocessing have been performed on the raw dataset and the data is saved in fst format. When the app loads, fst files are read and objects loaded to the memory. This achives much faster load times compared to reading from csv and preprocessing it from scratch everytime the app loads.
 - Waiter is used for loading screen.
