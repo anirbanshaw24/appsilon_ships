@@ -22,6 +22,8 @@ This app is built on a AIS dataset that logs the ships GPS coordinates and vario
 - Port - current port assigned based on the ship’s location
 - Is_parked - indicator whether the ship is moving or not 
 
+[Live App](https://anirbanshaw24.shinyapps.io/appsilon_ships/)
+
 ## Usage
 - As soon as the app loads, the leaflet map object displays all the unique ports and their names present in the dataset. 
 - To begin, please select a Vessel Type.
